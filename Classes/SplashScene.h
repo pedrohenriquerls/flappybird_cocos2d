@@ -15,6 +15,9 @@ public:
     
     // implement the "static create()" method manually
     CREATE_FUNC(SplashScene);
+
+private:
+    void goToMainMenuScene(float dt);
 };
 
-#endif // __HELLOWORLD_SCENE_H__
+#endif // __SPLASH_SCENE_H__

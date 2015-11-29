@@ -1,4 +1,6 @@
 #include "SplashScene.h"
+#include "MainMenuScene.h"
+#include "Definitions.h"
 
 USING_NS_CC;
 
@@ -27,8 +29,22 @@ bool SplashScene::init()
         return false;
     }
     
-//    Size visibleSize = Director::getInstance()->getVisibleSize();
-//    Vec2 origin = Director::getInstance()->getVisibleOrigin();
+    Size visibleSize = Director::getInstance()->getVisibleSize();
+    Vec2 origin = Director::getInstance()->getVisibleOrigin();
+    this->scheduleOnce(schedule_selector(SplashScene::goToMainMenuScene), DISPLAY_TIME_SPLASH_SCENE);
+    auto backgroundSprite = Sprite::create("Splash Screen.png");
+    
+    auto point = Point(visibleSize.width / 2 + origin.x, visibleSize.height / 2 + origin.y);
+    backgroundSprite->setPosition(point);
+    
+    this->addChild( backgroundSprite );
     
     return true;
 }
+
+void SplashScene::goToMainMenuScene(float dt){
+    auto scene = MainMenuScene::createScene();
+    auto transitionScene = TransitionFade::create(TRANSITION_TIME, scene);
+    Director::getInstance()->replaceScene(transitionScene);
+}
+
