@@ -28,8 +28,7 @@ bool MainMenuScene::init()
     {
         return false;
     }
-    
-    Size visibleSize = Director::getInstance()->getVisibleSize();
+
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
     auto backgroundSprite = Sprite::create("Background.png");

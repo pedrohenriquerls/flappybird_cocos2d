@@ -28,8 +28,7 @@ bool SplashScene::init()
     {
         return false;
     }
-    
-    Size visibleSize = Director::getInstance()->getVisibleSize();
+
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     this->scheduleOnce(schedule_selector(SplashScene::goToMainMenuScene), DISPLAY_TIME_SPLASH_SCENE);
     auto backgroundSprite = Sprite::create("Splash Screen.png");

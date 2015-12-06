@@ -27,7 +27,6 @@ bool GameOverScene::init()
         return false;
     }
     
-//    Size visibleSize = Director::getInstance()->getVisibleSize();
 //    Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
     return true;

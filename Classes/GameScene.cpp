@@ -1,14 +1,18 @@
 #include "GameScene.h"
+#include "Definitions.h"
 
 USING_NS_CC;
 
 Scene* GameScene::createScene()
 {
     // 'scene' is an autorelease object
-    auto scene = Scene::create();
-    
-    // 'layer' is an autorelease object
+    auto scene = Scene::createWithPhysics();
+    auto scenePhysicsWorld = scene->getPhysicsWorld();
+    if(DEBUG_MODE)
+        scenePhysicsWorld->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
+
     auto layer = GameScene::create();
+    layer->setPhysicsWorld(scenePhysicsWorld);
 
     // add layer as a child to scene
     scene->addChild(layer);
@@ -27,8 +31,18 @@ bool GameScene::init()
         return false;
     }
     
-//    Size visibleSize = Director::getInstance()->getVisibleSize();
-//    Vec2 origin = Director::getInstance()->getVisibleOrigin();
+    Size visibleSize = Director::getInstance()->getVisibleSize();
+    Vec2 origin = Director::getInstance()->getVisibleOrigin();
+    
+    auto backgroundSprite = Sprite::create("Background.png");
+    backgroundSprite->setPosition(CENTER_POSITION);
+    addChild(backgroundSprite);
+    
+    auto edgeBody = PhysicsBody::createEdgeBox(visibleSize, PHYSICSBODY_MATERIAL_DEFAULT, 3);
+    auto edgeNode = Node::create();
+    edgeNode->setPosition(CENTER_POSITION);
+    edgeNode->setPhysicsBody(edgeBody);
+    addChild(edgeNode);
     
     return true;
 }
