@@ -61,8 +61,6 @@
 		D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620D132DFF430009C878 /* AVFoundation.framework */; };
 		D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620F132DFF4E0009C878 /* AudioToolbox.framework */; };
 		D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B0611A1803AB670077942B /* CoreMotion.framework */; };
-		E60B88051C0B749E0071940B /* SplashScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E60B88031C0B749E0071940B /* SplashScene.cpp */; };
-		E60B88061C0B749E0071940B /* SplashScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E60B88031C0B749E0071940B /* SplashScene.cpp */; };
 		E60B880D1C0B76F90071940B /* GameOverScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E60B88071C0B76F90071940B /* GameOverScene.cpp */; };
 		E60B880E1C0B76F90071940B /* GameOverScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E60B88071C0B76F90071940B /* GameOverScene.cpp */; };
 		E60B880F1C0B76F90071940B /* MainMenuScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E60B88091C0B76F90071940B /* MainMenuScene.cpp */; };
@@ -93,6 +91,8 @@
 		E60B884D1C0B7D660071940B /* Splash Screen.png in Resources */ = {isa = PBXBuildFile; fileRef = E60B88361C0B7D660071940B /* Splash Screen.png */; };
 		E60B884E1C0B7D660071940B /* Title.png in Resources */ = {isa = PBXBuildFile; fileRef = E60B88371C0B7D660071940B /* Title.png */; };
 		E60B884F1C0B7D660071940B /* Title.png in Resources */ = {isa = PBXBuildFile; fileRef = E60B88371C0B7D660071940B /* Title.png */; };
+		E62640A81C13D8CC00F02CFC /* Pipe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E62640A61C13D8CC00F02CFC /* Pipe.cpp */; };
+		E62640A91C13D8CC00F02CFC /* Pipe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E62640A61C13D8CC00F02CFC /* Pipe.cpp */; };
 		ED545A7C1B68A1F400C3958E /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED545A7B1B68A1F400C3958E /* libiconv.dylib */; };
 		ED545A7E1B68A1FA00C3958E /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED545A7D1B68A1FA00C3958E /* libiconv.dylib */; };
 /* End PBXBuildFile section */
@@ -183,8 +183,6 @@
 		D44C620D132DFF430009C878 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D44C620F132DFF4E0009C878 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		D6B0611A1803AB670077942B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
-		E60B88031C0B749E0071940B /* SplashScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SplashScene.cpp; sourceTree = "<group>"; };
-		E60B88041C0B749E0071940B /* SplashScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScene.h; sourceTree = "<group>"; };
 		E60B88071C0B76F90071940B /* GameOverScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameOverScene.cpp; sourceTree = "<group>"; };
 		E60B88081C0B76F90071940B /* GameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverScene.h; sourceTree = "<group>"; };
 		E60B88091C0B76F90071940B /* MainMenuScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainMenuScene.cpp; sourceTree = "<group>"; };
@@ -204,6 +202,8 @@
 		E60B88361C0B7D660071940B /* Splash Screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Splash Screen.png"; sourceTree = "<group>"; };
 		E60B88371C0B7D660071940B /* Title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Title.png; sourceTree = "<group>"; };
 		E60B88501C0B7F250071940B /* Definitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Definitions.h; sourceTree = "<group>"; };
+		E62640A61C13D8CC00F02CFC /* Pipe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Pipe.cpp; sourceTree = "<group>"; };
+		E62640A71C13D8CC00F02CFC /* Pipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pipe.h; sourceTree = "<group>"; };
 		ED545A7B1B68A1F400C3958E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.4.sdk/usr/lib/libiconv.dylib; sourceTree = DEVELOPER_DIR; };
 		ED545A7D1B68A1FA00C3958E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -356,10 +356,10 @@
 				E60B88081C0B76F90071940B /* GameOverScene.h */,
 				E60B88091C0B76F90071940B /* MainMenuScene.cpp */,
 				E60B880A1C0B76F90071940B /* MainMenuScene.h */,
+				E62640A61C13D8CC00F02CFC /* Pipe.cpp */,
+				E62640A71C13D8CC00F02CFC /* Pipe.h */,
 				E60B88131C0B77690071940B /* GameScene.cpp */,
 				E60B88141C0B77690071940B /* GameScene.h */,
-				E60B88031C0B749E0071940B /* SplashScene.cpp */,
-				E60B88041C0B749E0071940B /* SplashScene.h */,
 				E60B88501C0B7F250071940B /* Definitions.h */,
 			);
 			name = Classes;
@@ -576,12 +576,12 @@
 			files = (
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				E60B880F1C0B76F90071940B /* MainMenuScene.cpp in Sources */,
-				E60B88051C0B749E0071940B /* SplashScene.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				E60B880D1C0B76F90071940B /* GameOverScene.cpp in Sources */,
 				E60B88151C0B77690071940B /* GameScene.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				E62640A81C13D8CC00F02CFC /* Pipe.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,9 +590,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
-				E60B88061C0B749E0071940B /* SplashScene.cpp in Sources */,
 				E60B880E1C0B76F90071940B /* GameOverScene.cpp in Sources */,
 				E60B88161C0B77690071940B /* GameScene.cpp in Sources */,
+				E62640A91C13D8CC00F02CFC /* Pipe.cpp in Sources */,
 				E60B88101C0B76F90071940B /* MainMenuScene.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 			);

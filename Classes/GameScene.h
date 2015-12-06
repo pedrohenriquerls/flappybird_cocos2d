@@ -2,6 +2,7 @@
 #define __GAME_SCENE_H__
 
 #include "cocos2d.h"
+#include "Pipe.h"
 
 class GameScene : public cocos2d::Layer
 {
@@ -12,13 +13,14 @@ public:
     
     // implement the "static create()" method manually
     CREATE_FUNC(GameScene);
-    
 private:
+    cocos2d::PhysicsWorld *sceneWorld;
     void setPhysicsWorld(cocos2d::PhysicsWorld *world){
         sceneWorld = world;
-    }
+    };
     
-    cocos2d::PhysicsWorld *sceneWorld;
+    void spawnPipe(float dt);
+    Pipe *pipe;
 };
 
-#endif // __HELLOWORLD_SCENE_H__
+#endif // __GAME_SCENE_H__

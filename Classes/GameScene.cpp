@@ -33,8 +33,10 @@ bool GameScene::init()
     
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
+    pipe = new Pipe(visibleSize, origin);
     
     auto backgroundSprite = Sprite::create("Background.png");
+//    backgroundSprite->setScale(visibleSize.width, visibleSize.height);
     backgroundSprite->setPosition(CENTER_POSITION);
     addChild(backgroundSprite);
     
@@ -44,5 +46,11 @@ bool GameScene::init()
     edgeNode->setPhysicsBody(edgeBody);
     addChild(edgeNode);
     
+    this->schedule(schedule_selector(GameScene::spawnPipe), 0.005);
+    
     return true;
+}
+
+void GameScene::spawnPipe(float dt){
+    pipe->spawnPipe(this);
 }
