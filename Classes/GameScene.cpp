@@ -46,7 +46,7 @@ bool GameScene::init()
     edgeNode->setPhysicsBody(edgeBody);
     addChild(edgeNode);
     
-    this->schedule(schedule_selector(GameScene::spawnPipe), 0.005);
+    this->schedule(schedule_selector(GameScene::spawnPipe), 0.005 * visibleSize.width);
     
     return true;
 }
