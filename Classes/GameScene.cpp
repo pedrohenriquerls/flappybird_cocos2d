@@ -36,7 +36,6 @@ bool GameScene::init()
     pipe = new Pipe(visibleSize, origin);
     
     auto backgroundSprite = Sprite::create("Background.png");
-//    backgroundSprite->setScale(visibleSize.width, visibleSize.height);
     backgroundSprite->setPosition(CENTER_POSITION);
     addChild(backgroundSprite);
     
