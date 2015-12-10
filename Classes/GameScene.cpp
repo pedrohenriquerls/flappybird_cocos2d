@@ -1,5 +1,6 @@
 #include "GameScene.h"
 #include "Definitions.h"
+#include "Bird.h"
 
 USING_NS_CC;
 
@@ -33,6 +34,7 @@ bool GameScene::init()
     
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
+    new Bird(visibleSize, origin, this);
     pipe = new Pipe(visibleSize, origin);
     
     auto backgroundSprite = Sprite::create("Background.png");

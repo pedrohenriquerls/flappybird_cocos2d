@@ -93,6 +93,8 @@
 		E60B884F1C0B7D660071940B /* Title.png in Resources */ = {isa = PBXBuildFile; fileRef = E60B88371C0B7D660071940B /* Title.png */; };
 		E62640A81C13D8CC00F02CFC /* Pipe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E62640A61C13D8CC00F02CFC /* Pipe.cpp */; };
 		E62640A91C13D8CC00F02CFC /* Pipe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E62640A61C13D8CC00F02CFC /* Pipe.cpp */; };
+		E6C44CC11C150B2B0027D311 /* Bird.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6C44CC01C150B2B0027D311 /* Bird.cpp */; };
+		E6C44CC21C150B2B0027D311 /* Bird.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6C44CC01C150B2B0027D311 /* Bird.cpp */; };
 		ED545A7C1B68A1F400C3958E /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED545A7B1B68A1F400C3958E /* libiconv.dylib */; };
 		ED545A7E1B68A1FA00C3958E /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED545A7D1B68A1FA00C3958E /* libiconv.dylib */; };
 /* End PBXBuildFile section */
@@ -204,6 +206,8 @@
 		E60B88501C0B7F250071940B /* Definitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Definitions.h; sourceTree = "<group>"; };
 		E62640A61C13D8CC00F02CFC /* Pipe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Pipe.cpp; sourceTree = "<group>"; };
 		E62640A71C13D8CC00F02CFC /* Pipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pipe.h; sourceTree = "<group>"; };
+		E6C44CBF1C150ADD0027D311 /* Bird.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bird.h; sourceTree = "<group>"; };
+		E6C44CC01C150B2B0027D311 /* Bird.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Bird.cpp; sourceTree = "<group>"; };
 		ED545A7B1B68A1F400C3958E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.4.sdk/usr/lib/libiconv.dylib; sourceTree = DEVELOPER_DIR; };
 		ED545A7D1B68A1FA00C3958E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -361,6 +365,8 @@
 				E60B88131C0B77690071940B /* GameScene.cpp */,
 				E60B88141C0B77690071940B /* GameScene.h */,
 				E60B88501C0B7F250071940B /* Definitions.h */,
+				E6C44CBF1C150ADD0027D311 /* Bird.h */,
+				E6C44CC01C150B2B0027D311 /* Bird.cpp */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -574,6 +580,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6C44CC11C150B2B0027D311 /* Bird.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				E60B880F1C0B76F90071940B /* MainMenuScene.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
@@ -594,6 +601,7 @@
 				E60B88161C0B77690071940B /* GameScene.cpp in Sources */,
 				E62640A91C13D8CC00F02CFC /* Pipe.cpp in Sources */,
 				E60B88101C0B76F90071940B /* MainMenuScene.cpp in Sources */,
+				E6C44CC21C150B2B0027D311 /* Bird.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
