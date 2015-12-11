@@ -6,4 +6,7 @@
 #define DEBUG_MODE true
 #define CENTER_POSITION Point(Director::getInstance()->getVisibleSize().width / 2 + origin.x, Director::getInstance()->getVisibleSize().height / 2 + origin.y)
 
+#define BIRD_COLLIDER 0x000001
+#define PIPE_COLLIDER 0x000002
+
 #endif

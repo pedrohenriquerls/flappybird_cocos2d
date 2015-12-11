@@ -14,13 +14,14 @@ public:
     // implement the "static create()" method manually
     CREATE_FUNC(GameScene);
 private:
+    Pipe *pipe;
     cocos2d::PhysicsWorld *sceneWorld;
+    bool checkCollision(cocos2d::PhysicsBody *a, cocos2d::PhysicsBody *b);
+    bool onBirdCollidesWithPipe(cocos2d::PhysicsContact &contact);
+    void spawnPipe(float dt);
     void setPhysicsWorld(cocos2d::PhysicsWorld *world){
         sceneWorld = world;
-    };
-    
-    void spawnPipe(float dt);
-    Pipe *pipe;
+    }
 };
 
 #endif // __GAME_SCENE_H__

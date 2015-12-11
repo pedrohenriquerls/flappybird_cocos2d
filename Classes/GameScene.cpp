@@ -32,8 +32,9 @@ bool GameScene::init()
         return false;
     }
     
-    Size visibleSize = Director::getInstance()->getVisibleSize();
-    Vec2 origin = Director::getInstance()->getVisibleOrigin();
+    auto director = Director::getInstance();
+    Size visibleSize = director->getVisibleSize();
+    Vec2 origin = director->getVisibleOrigin();
     new Bird(visibleSize, origin, this);
     pipe = new Pipe(visibleSize, origin);
     
@@ -49,7 +50,25 @@ bool GameScene::init()
     
     this->schedule(schedule_selector(GameScene::spawnPipe), 0.005 * visibleSize.width);
     
+    auto eventListener = EventListenerPhysicsContact::create();
+    eventListener->onContactBegin = CC_CALLBACK_1(GameScene::onBirdCollidesWithPipe, this);
+    director->getEventDispatcher()->addEventListenerWithSceneGraphPriority(eventListener, this);
+
     return true;
+}
+
+bool GameScene::onBirdCollidesWithPipe(cocos2d::PhysicsContact &contact){
+    PhysicsBody *a = contact.getShapeA( )->getBody();
+    PhysicsBody *b = contact.getShapeB( )->getBody();
+    
+    if (checkCollision(a, b) || checkCollision(b, a))
+        CCLOG("collision with pipe");
+    
+    return true;
+}
+
+bool GameScene::checkCollision(PhysicsBody *a, PhysicsBody *b){
+    return (BIRD_COLLIDER == a->getCollisionBitmask( ) && PIPE_COLLIDER == b->getCollisionBitmask());
 }
 
 void GameScene::spawnPipe(float dt){

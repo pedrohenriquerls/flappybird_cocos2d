@@ -1,4 +1,5 @@
 #include "Pipe.h"
+#include "Definitions.h"
 
 USING_NS_CC;
 
@@ -26,7 +27,15 @@ void Pipe::spawnPipe(cocos2d::Layer *layer){
     auto topPipePosition = (random * visibleSize.height) + (topPipeSize.height/2);
     
     topPipeBody->setDynamic(false);
+    topPipeBody->setCollisionBitmask(PIPE_COLLIDER);
+
     bottomPipeBody->setDynamic(false);
+    bottomPipeBody->setCollisionBitmask(PIPE_COLLIDER);
+    
+    if(DEBUG_MODE){
+        bottomPipeBody->setContactTestBitmask(true);
+        topPipeBody->setContactTestBitmask(true);
+    }
     
     topPipe->setPhysicsBody(topPipeBody);
     bottomPipe->setPhysicsBody(bottomPipeBody);
